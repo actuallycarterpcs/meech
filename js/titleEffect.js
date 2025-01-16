@@ -1,4 +1,4 @@
-const titleText = "meechh.xyz"; // The text you want to type out
+const titleText = "moonzy"; 
 let index = 0;
 let isTyping = true;
 
@@ -7,23 +7,21 @@ function typeTitle() {
         if (index < titleText.length) {
             document.title += titleText.charAt(index);
             index++;
-            setTimeout(typeTitle, 300); // Adjust typing speed here
+            setTimeout(typeTitle, 300); 
         } else {
             isTyping = false;
-            setTimeout(typeTitle, 1000); // Pause before starting to erase
+            setTimeout(typeTitle, 1000);
         }
     } else {
         if (index > 0) {
             document.title = titleText.substring(0, index - 1);
             index--;
-            setTimeout(typeTitle, 300); // Adjusted erasing speed here
+            setTimeout(typeTitle, 300); 
         } else {
             isTyping = true;
-            index = 0; // Reset index for typing
-            setTimeout(typeTitle, 500); // Pause before starting to type again
+            index = 0; 
+            setTimeout(typeTitle, 500); 
         }
     }
 }
-
-// Start the typing effect
 typeTitle();
